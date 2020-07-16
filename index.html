@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <link  rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> 
-    <title>Dashboard</title>
+    <title>Clima no Brasil</title>
 </head>
 <body>
     <header>
@@ -14,18 +14,37 @@
         <h1 class="page-title">DASHBOARD | Clima no Brasil</h1>
     </header>
     <main>
-        <div class="container-1">
+        <div class="container">
             <figure>
-                <canvas id="grafico-1"> </canvas>
-                <button onclick="convert()"> Converter </button>
+                <canvas id="MA" data-tipoGrafico="bar">Nordeste</canvas>
             </figure>
-
             <figure>
-                <canvas id="grafico-2"> </canvas>
-                <button onclick="convert()"> Converter </button>
+                <canvas id="PI" data-tipoGrafico="bar"> </canvas>
             </figure>
+            <figure>
+                <canvas id="CE" data-tipoGrafico="bar"> </canvas>
+            </figure>
+            <figure>
+                <canvas id="RN" data-tipoGrafico="bar"> </canvas>
+            </figure>
+            <figure>
+                <canvas id="PB" data-tipoGrafico="bar"> </canvas>
+            </figure>
+            <figure>
+                <canvas id="PE" data-tipoGrafico="bar"> </canvas>
+            </figure>
+            <figure>
+                <canvas id="AL" data-tipoGrafico="bar"> </canvas>
+            </figure>
+            <figure>
+                <canvas id="SE" data-tipoGrafico="bar"> </canvas>
+            </figure>
+            <figure>
+                <canvas id="BA" data-tipoGrafico="bar"> </canvas>
+            </figure>
+            <button onclick="convert()"> Converter </button>
         </div>
-        <div class="container-2">
+        <div class="container">
             <figure>
                 <canvas id="grafico-3"> </canvas>
                 <button onclick="convert()"> Converter </button>
