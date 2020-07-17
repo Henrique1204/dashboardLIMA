@@ -120,7 +120,8 @@ var climaBR = [
     "horario": "00:00",
     "temperatura": 35
   },
-  {
+  {//Nordeste
+    //06:00
   "estado": "MA",
   "horario": "06:00",
   "temperatura": 48
@@ -157,7 +158,7 @@ var climaBR = [
   "horario": "06:00",
   "temperatura": 33
 },
-{
+{//12:00
   "estado": "MA",
   "horario": "12:00",
   "temperatura": 20
@@ -194,7 +195,7 @@ var climaBR = [
   "horario": "12:00",
   "temperatura": 33
 },
-{
+{//18:00
   "estado": "MA",
   "horario": "18:00",
   "temperatura": 48
@@ -231,7 +232,7 @@ var climaBR = [
   "horario": "18:00",
   "temperatura": 33
 },
-{
+{ //00:00
   "estado": "MA",
   "horario": "00:00",
   "temperatura": 48
@@ -267,8 +268,74 @@ var climaBR = [
   "estado": "SE",
   "horario": "00:00",
   "temperatura": 33
+}, {//Centro-Oeste
+  "estado":"GO",
+  "horario": "00:00",
+  "temperatura": 19
+}, {
+  "estado":"DF",
+  "horario":"00:00",
+  "temperatura": 25
+}, {
+  "estado":"MT",
+  "horario":"00:00",
+  "temperatura": 21
+}, {
+  "estado":"MS",
+  "horario": "00:00",
+  "temperatura":23
+}, {
+  "estado":"GO",
+  "horario": "06:00",
+  "temperatura": 20
+}, {
+  "estado":"DF",
+  "horario":"06:00",
+  "temperatura": 23
+}, {
+  "estado":"MT",
+  "horario":"06:00",
+  "temperatura": 22
+}, {
+  "estado":"MS",
+  "horario": "06:00",
+  "temperatura":24
+}, {  
+    "estado":"GO",
+  "horario": "12:00",
+  "temperatura": 35
+}, {
+  "estado":"DF",
+  "horario":"12:00",
+  "temperatura": 26
+}, {
+  "estado":"MT",
+  "horario":"12:00",
+  "temperatura": 33
+}, {
+  "estado":"MS",
+  "horario": "12:00",
+  "temperatura":32
+}, {
+  "estado":"GO",
+  "horario": "18:00",
+  "temperatura": 19
+}, {
+  "estado":"DF",
+  "horario":"18:00",
+  "temperatura": 17
+}, {
+  "estado":"MT",
+  "horario":"18:00",
+  "temperatura": 24
+}, {
+  "estado":"MS",
+  "horario": "18:00",
+  "temperatura":26
+}, {
+
 }];
-var sigla = [ "AM", "AC", "RO", "PA", "RR", "AP", "TO", "MA","SE","BA","AL", "PE", "PI", "PB", "CE", "RN"];
+var sigla = [ "AM", "AC", "RO", "PA", "RR", "AP", "TO", "MA","SE","BA","AL", "PE", "PI", "PB", "CE", "RN","GO","DF", "MT", "MS"];
 var dadosformatados = gerarDados(sigla, climaBR);
 
 // Canvas
@@ -299,7 +366,7 @@ function definirCor(siglas){
       return "red";
     case "DF":
     case "MT":
-    case"GO":
+    case "GO":
     case "MS":
       return "yellow";
     case "AM":
