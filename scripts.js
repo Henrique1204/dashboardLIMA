@@ -182,36 +182,6 @@ var climaBR = [{
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const canvas = document.querySelectorAll("[data-tipoGrafico]");
 
 function gerarGrafico(canvas, tipo ,dados) {
@@ -252,4 +222,23 @@ function gerarGrafico(canvas, tipo ,dados) {
    
       gerarGrafico(item, tipo, dadosformatados[0]);
   });
+
+  function definirCores(siglas){
+
+    switch (siglas) {
+        case "CE":
+        case "RN":
+        case "PB":
+        case "SE":
+        case "BA":
+        case "PE":
+        case "AL":
+        case "PI":
+        case "MA":       
+        return "red";
+
+        default:
+            break;
+    }
+  }
 
