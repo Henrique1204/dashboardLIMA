@@ -333,9 +333,11 @@ function gerarDados(id, dados) {
   return dadosfinais;
 }
 
+
+
 function gerarGrafico(canvas, tipo , dados, cor) {
+  Chart.defaults.global.defaultFontColor = 'white';
   let ctx = canvas.getContext("2d");
-  
   new Chart(ctx, {
     type: tipo,
     
@@ -343,9 +345,9 @@ function gerarGrafico(canvas, tipo , dados, cor) {
       labels: dados["horario"],
       datasets: [
         {
-          label: "clima",
-          backgroundColor: cor,
-          borderColor: "white",
+          label: "Graus °C",
+           backgroundColor: cor,
+          borderColor: "gray",
           data: dados["temperatura"]
         }
       ]

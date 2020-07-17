@@ -16,6 +16,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    font-family: 'Raleway', sans-serif;
 }
 
 header {
@@ -43,6 +44,41 @@ header {
 }
 .container-2 {
 } */
+#norte{
+    height: 20vh;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #212138;
+    box-shadow: 5px 5px 10px #0d0b18;
+
+}
+#norte h1{
+  font-weight: bolder;
+  color:green;
+  font-size: 4.9vh;
+}
+
+#norte button{
+    background-color: green;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    padding: 8px 26px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    
+}
+
+#norte button:hover{
+    background-color: white; /* Green */
+    color:green;
+}
 
 .container {
     display: flex;
@@ -63,6 +99,12 @@ header {
 figure {
     margin: 20px;
     max-width: 100%;
+}
+
+figcaption{
+    text-align: center;
+    font-weight: bolder;
+    color: green;
 }
 
 .button {
