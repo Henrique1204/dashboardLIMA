@@ -1,5 +1,126 @@
 // Dados
-var climaBR = [{
+var climaBR = [
+  //Norte, 06:00
+  {
+    "estado": "AM",
+    "horario": "06:00",
+    "temperatura": 48
+  }, {
+    "estado": "AC",
+    "horario": "06:00",
+    "temperatura": 45
+  }, {
+    "estado": "RO",
+    "horario": "06:00",
+    "temperatura": 43
+  }, {
+    "estado": "PA",
+    "horario": "06:00",
+    "temperatura": 50
+  }, {
+    "estado": "RR",
+    "horario": "06:00",
+    "temperatura": 20
+  }, {
+    "estado": "AP",
+    "horario": "06:00",
+    "temperatura": 47
+  }, {
+    "estado": "TO",
+    "horario": "06:00",
+    "temperatura": 30
+  },
+  //12:00
+  {
+    "estado": "AM",
+    "horario": "12:00",
+    "temperatura": 48
+  }, {
+    "estado": "AC",
+    "horario": "12:00",
+    "temperatura": 45
+  }, {
+    "estado": "RO",
+    "horario": "12:00",
+    "temperatura": 43
+  }, {
+    "estado": "PA",
+    "horario": "12:00",
+    "temperatura": 50
+  }, {
+    "estado": "RR",
+    "horario": "12:00",
+    "temperatura": 20
+  }, {
+    "estado": "AP",
+    "horario": "12:00",
+    "temperatura": 47
+  }, {
+    "estado": "TO",
+    "horario": "12:00",
+    "temperatura": 30
+  },
+  // 18:00
+  {
+    "estado": "AM",
+    "horario": "18:00",
+    "temperatura": 48
+  }, {
+    "estado": "AC",
+    "horario": "18:00",
+    "temperatura": 45
+  }, {
+    "estado": "RO",
+    "horario": "18:00",
+    "temperatura": 43
+  }, {
+    "estado": "PA",
+    "horario": "18:00",
+    "temperatura": 50
+  }, {
+    "estado": "RR",
+    "horario": "18:00",
+    "temperatura": 20
+  }, {
+    "estado": "AP",
+    "horario": "18:00",
+    "temperatura": 47
+  }, {
+    "estado": "TO",
+    "horario": "18:00",
+    "temperatura": 30
+  },
+  //00:00
+  {
+    "estado": "AM",
+    "horario": "00:00",
+    "temperatura": 48
+  }, {
+    "estado": "AC",
+    "horario": "00:00",
+    "temperatura": 45
+  }, {
+    "estado": "RO",
+    "horario": "00:00",
+    "temperatura": 43
+  }, {
+    "estado": "PA",
+    "horario": "00:00",
+    "temperatura": 50
+  }, {
+    "estado": "RR",
+    "horario": "00:00",
+    "temperatura": 20
+  }, {
+    "estado": "AP",
+    "horario": "00:00",
+    "temperatura": 47
+  }, {
+    "estado": "TO",
+    "horario": "00:00",
+    "temperatura": 30
+  },
+  {
   "estado": "MA",
   "horario": "06:00",
   "temperatura": 48
@@ -147,7 +268,7 @@ var climaBR = [{
   "horario": "00:00",
   "temperatura": 33
 }];
-var sigla = ["MA","SE","BA","AL", "PE", "PI", "PB", "CE", "RN"];
+var sigla = [ "AM", "AC", "RO", "PA", "RR", "AP", "TO", "MA","SE","BA","AL", "PE", "PI", "PB", "CE", "RN"];
 var dadosformatados = gerarDados(sigla, climaBR);
 
 // Canvas
@@ -180,7 +301,16 @@ function definirCor(siglas){
     case "MT":
     case"GO":
     case "MS":
-      return "yellow"
+      return "yellow";
+    case "AM":
+    case "AC":
+    case "RO":
+    case "PA":
+    case "RR":
+    case "AP":
+    case "TO":
+    return 'green';          
+    
     default:
       return "white";
   }
