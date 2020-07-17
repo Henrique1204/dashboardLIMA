@@ -145,9 +145,75 @@ var climaBR = [{
     "estado": "SE",
     "horario": "00:00",
     "temperatura": 33
+  }, {
+    "estado":"DF",
+    "horario":"06:00",
+    "temperatura":22
+  }, {
+    "estado":"GO",
+    "horario":"06:00",
+    "temperatura":33
+  }, {
+    "estado":"MT",
+    "horario":"06:00",
+    "temperatura":40
+  }, {
+    "estado":"MS",
+    "horario":"06:00",
+    "temperatura":25
+  }, {
+    "estado":"DF",
+    "horario":"12:00",
+    "temperatura":27
+  }, {
+    "estado":"GO",
+    "horario":"12:00",
+    "temperatura":25
+  }, {
+    "estado":"MT",
+    "horario":"12:00",
+    "temperatura":35
+  }, {
+    "estado":"MS",
+    "horario":"12:00",
+    "temperatura":23
+  }, {
+    "estado":"DF",
+    "horario":"18:00",
+    "temperatura": 24
+  }, {
+    "estado":"GO",
+    "horario":"18:00",
+    "temperatura":27
+  }, {
+    "estado":"MT",
+    "horario":"18:00",
+    "temperatura":32
+  }, {
+    "estado":"MS",
+    "horario":"18:00",
+    "temperatura":29
+
+  }, {
+    "estado":"DF",
+    "horario":"00:00",
+    "temperatura":19
+  }, {
+    "estado":"GO",
+    "horario":"00:00",
+    "temperatura":23
+  }, {
+    "estado":"MT",
+    "horario":"00:00",
+    "temperatura":25
+  }, {
+    "estado":"MS",
+    "horario":"00:00",
+    "temperatura":22
+
   }]
 
-  var sigla = ["MA","SE","BA","AL", "PE", "PI", "PB", "CE", "RN"];
+  var sigla = ["MA","SE","BA","AL", "PE", "PI", "PB", "CE", "RN", "DF","GO","MT","MS"];
 
   var dadosformatados = gerarDados(sigla, climaBR)
 
@@ -236,7 +302,11 @@ function gerarGrafico(canvas, tipo ,dados) {
         case "PI":
         case "MA":       
         return "red";
-
+        case "DF":
+        case "MT":
+        case"GO":
+        case "MS":
+        return "yellow"
         default:
             break;
     }
