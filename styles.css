@@ -110,7 +110,9 @@ figcaption{
 .button {
     background-color: #0d0b18;
 }
-#centrooeste h1{
-
+.Centro{
+    color: yellow;
+    font-weight: bolder;
+    font-size: 4.9vh;
 
 }
