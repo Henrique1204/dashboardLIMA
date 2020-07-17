@@ -4,87 +4,87 @@ var climaBR = [
   {
     "estado": "AM",
     "horario": "06:00",
-    "temperatura": 48
+    "temperatura": 26
   }, {
     "estado": "AC",
     "horario": "06:00",
-    "temperatura": 45
+    "temperatura": 24
   }, {
     "estado": "RO",
     "horario": "06:00",
-    "temperatura": 43
+    "temperatura": 27
   }, {
     "estado": "PA",
     "horario": "06:00",
-    "temperatura": 50
+    "temperatura": 22
   }, {
     "estado": "RR",
     "horario": "06:00",
-    "temperatura": 20
+    "temperatura": 22
   }, {
     "estado": "AP",
     "horario": "06:00",
-    "temperatura": 47
+    "temperatura": 27
   }, {
     "estado": "TO",
     "horario": "06:00",
-    "temperatura": 30
+    "temperatura": 23
   },
   //12:00
   {
     "estado": "AM",
     "horario": "12:00",
-    "temperatura": 48
+    "temperatura": 34
   }, {
     "estado": "AC",
     "horario": "12:00",
-    "temperatura": 45
+    "temperatura": 39
   }, {
     "estado": "RO",
     "horario": "12:00",
-    "temperatura": 43
+    "temperatura": 33
   }, {
     "estado": "PA",
     "horario": "12:00",
-    "temperatura": 50
+    "temperatura": 36
   }, {
     "estado": "RR",
     "horario": "12:00",
-    "temperatura": 20
+    "temperatura": 38
   }, {
     "estado": "AP",
     "horario": "12:00",
-    "temperatura": 47
+    "temperatura": 40
   }, {
     "estado": "TO",
     "horario": "12:00",
-    "temperatura": 30
+    "temperatura": 42
   },
   // 18:00
   {
     "estado": "AM",
     "horario": "18:00",
-    "temperatura": 48
+    "temperatura": 32
   }, {
     "estado": "AC",
     "horario": "18:00",
-    "temperatura": 45
+    "temperatura": 37
   }, {
     "estado": "RO",
     "horario": "18:00",
-    "temperatura": 43
+    "temperatura": 40
   }, {
     "estado": "PA",
     "horario": "18:00",
-    "temperatura": 50
+    "temperatura": 39
   }, {
     "estado": "RR",
     "horario": "18:00",
-    "temperatura": 20
+    "temperatura": 29
   }, {
     "estado": "AP",
     "horario": "18:00",
-    "temperatura": 47
+    "temperatura": 31
   }, {
     "estado": "TO",
     "horario": "18:00",
@@ -94,31 +94,31 @@ var climaBR = [
   {
     "estado": "AM",
     "horario": "00:00",
-    "temperatura": 48
+    "temperatura": 25
   }, {
     "estado": "AC",
     "horario": "00:00",
-    "temperatura": 45
+    "temperatura": 21
   }, {
     "estado": "RO",
     "horario": "00:00",
-    "temperatura": 43
+    "temperatura": 32
   }, {
     "estado": "PA",
     "horario": "00:00",
-    "temperatura": 50
+    "temperatura": 29
   }, {
     "estado": "RR",
     "horario": "00:00",
-    "temperatura": 20
+    "temperatura": 30
   }, {
     "estado": "AP",
     "horario": "00:00",
-    "temperatura": 47
+    "temperatura": 27
   }, {
     "estado": "TO",
     "horario": "00:00",
-    "temperatura": 30
+    "temperatura": 35
   },
   {
   "estado": "MA",
