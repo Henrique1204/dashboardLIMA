@@ -1,359 +1,54 @@
-// Dados
-var climaBR = [
-  //Norte, 06:00
-  {
-    "estado": "AM",
-    "horario": "06:00",
-    "temperatura": 26
-  }, {
-    "estado": "AC",
-    "horario": "06:00",
-    "temperatura": 24
-  }, {
-    "estado": "RO",
-    "horario": "06:00",
-    "temperatura": 27
-  }, {
-    "estado": "PA",
-    "horario": "06:00",
-    "temperatura": 22
-  }, {
-    "estado": "RR",
-    "horario": "06:00",
-    "temperatura": 22
-  }, {
-    "estado": "AP",
-    "horario": "06:00",
-    "temperatura": 27
-  }, {
-    "estado": "TO",
-    "horario": "06:00",
-    "temperatura": 23
-  },
-  //12:00
-  {
-    "estado": "AM",
-    "horario": "12:00",
-    "temperatura": 34
-  }, {
-    "estado": "AC",
-    "horario": "12:00",
-    "temperatura": 39
-  }, {
-    "estado": "RO",
-    "horario": "12:00",
-    "temperatura": 33
-  }, {
-    "estado": "PA",
-    "horario": "12:00",
-    "temperatura": 36
-  }, {
-    "estado": "RR",
-    "horario": "12:00",
-    "temperatura": 38
-  }, {
-    "estado": "AP",
-    "horario": "12:00",
-    "temperatura": 40
-  }, {
-    "estado": "TO",
-    "horario": "12:00",
-    "temperatura": 42
-  },
-  // 18:00
-  {
-    "estado": "AM",
-    "horario": "18:00",
-    "temperatura": 32
-  }, {
-    "estado": "AC",
-    "horario": "18:00",
-    "temperatura": 37
-  }, {
-    "estado": "RO",
-    "horario": "18:00",
-    "temperatura": 40
-  }, {
-    "estado": "PA",
-    "horario": "18:00",
-    "temperatura": 39
-  }, {
-    "estado": "RR",
-    "horario": "18:00",
-    "temperatura": 29
-  }, {
-    "estado": "AP",
-    "horario": "18:00",
-    "temperatura": 31
-  }, {
-    "estado": "TO",
-    "horario": "18:00",
-    "temperatura": 30
-  },
-  //00:00
-  {
-    "estado": "AM",
-    "horario": "00:00",
-    "temperatura": 25
-  }, {
-    "estado": "AC",
-    "horario": "00:00",
-    "temperatura": 21
-  }, {
-    "estado": "RO",
-    "horario": "00:00",
-    "temperatura": 32
-  }, {
-    "estado": "PA",
-    "horario": "00:00",
-    "temperatura": 29
-  }, {
-    "estado": "RR",
-    "horario": "00:00",
-    "temperatura": 30
-  }, {
-    "estado": "AP",
-    "horario": "00:00",
-    "temperatura": 27
-  }, {
-    "estado": "TO",
-    "horario": "00:00",
-    "temperatura": 35
-  },
-  {//Nordeste
-    //06:00
-  "estado": "MA",
-  "horario": "06:00",
-  "temperatura": 48
-}, {
-  "estado": "PI",
-  "horario": "06:00",
-  "temperatura": 45
-}, {
-  "estado": "CE",
-  "horario": "06:00",
-  "temperatura": 43
-}, {
-  "estado": "BA",
-  "horario": "06:00",
-  "temperatura": 50
-}, {
-  "estado": "PE",
-  "horario": "06:00",
-  "temperatura": 20
-}, {
-  "estado": "RN",
-  "horario": "06:00",
-  "temperatura": 47
-}, {
-  "estado": "PB",
-  "horario": "06:00",
-  "temperatura": 30
-}, {
-  "estado": "AL",
-  "horario": "06:00",
-  "temperatura": 26
-}, {
-  "estado": "SE",
-  "horario": "06:00",
-  "temperatura": 33
-},
-{//12:00
-  "estado": "MA",
-  "horario": "12:00",
-  "temperatura": 20
-}, {
-  "estado": "PI",
-  "horario": "12:00",
-  "temperatura": 45
-}, {
-  "estado": "CE",
-  "horario": "12:00",
-  "temperatura": 43
-}, {
-  "estado": "BA",
-  "horario": "12:00",
-  "temperatura": 50
-}, {
-  "estado": "PE",
-  "horario": "12:00",
-  "temperatura": 20
-}, {
-  "estado": "RN",
-  "horario": "12:00",
-  "temperatura": 47
-}, {
-  "estado": "PB",
-  "horario": "12:00",
-  "temperatura": 30
-}, {
-  "estado": "AL",
-  "horario": "12:00",
-  "temperatura": 26
-}, {
-  "estado": "SE",
-  "horario": "12:00",
-  "temperatura": 33
-},
-{//18:00
-  "estado": "MA",
-  "horario": "18:00",
-  "temperatura": 48
-}, {
-  "estado": "PI",
-  "horario": "18:00",
-  "temperatura": 45
-}, {
-  "estado": "CE",
-  "horario": "18:00",
-  "temperatura": 43
-}, {
-  "estado": "BA",
-  "horario": "18:00",
-  "temperatura": 50
-}, {
-  "estado": "PE",
-  "horario": "18:00",
-  "temperatura": 20
-}, {
-  "estado": "RN",
-  "horario": "18:00",
-  "temperatura": 47
-}, {
-  "estado": "PB",
-  "horario": "18:00",
-  "temperatura": 30
-}, {
-  "estado": "AL",
-  "horario": "18:00",
-  "temperatura": 26
-}, {
-  "estado": "SE",
-  "horario": "18:00",
-  "temperatura": 33
-},
-{ //00:00
-  "estado": "MA",
-  "horario": "00:00",
-  "temperatura": 48
-}, {
-  "estado": "PI",
-  "horario": "00:00",
-  "temperatura": 45
-}, {
-  "estado": "CE",
-  "horario": "00:00",
-  "temperatura": 43
-}, {
-  "estado": "BA",
-  "horario": "00:00",
-  "temperatura": 50
-}, {
-  "estado": "PE",
-  "horario": "00:00",
-  "temperatura": 20
-}, {
-  "estado": "RN",
-  "horario": "00:00",
-  "temperatura": 47
-}, {
-  "estado": "PB",
-  "horario": "00:00",
-  "temperatura": 30
-}, {
-  "estado": "AL",
-  "horario": "00:00",
-  "temperatura": 26
-}, {
-  "estado": "SE",
-  "horario": "00:00",
-  "temperatura": 33
-}, {//Centro-Oeste
-  "estado":"GO",
-  "horario": "00:00",
-  "temperatura": 19
-}, {
-  "estado":"DF",
-  "horario":"00:00",
-  "temperatura": 25
-}, {
-  "estado":"MT",
-  "horario":"00:00",
-  "temperatura": 21
-}, {
-  "estado":"MS",
-  "horario": "00:00",
-  "temperatura":23
-}, {
-  "estado":"GO",
-  "horario": "06:00",
-  "temperatura": 20
-}, {
-  "estado":"DF",
-  "horario":"06:00",
-  "temperatura": 23
-}, {
-  "estado":"MT",
-  "horario":"06:00",
-  "temperatura": 22
-}, {
-  "estado":"MS",
-  "horario": "06:00",
-  "temperatura":24
-}, {  
-    "estado":"GO",
-  "horario": "12:00",
-  "temperatura": 35
-}, {
-  "estado":"DF",
-  "horario":"12:00",
-  "temperatura": 26
-}, {
-  "estado":"MT",
-  "horario":"12:00",
-  "temperatura": 33
-}, {
-  "estado":"MS",
-  "horario": "12:00",
-  "temperatura":32
-}, {
-  "estado":"GO",
-  "horario": "18:00",
-  "temperatura": 19
-}, {
-  "estado":"DF",
-  "horario":"18:00",
-  "temperatura": 17
-}, {
-  "estado":"MT",
-  "horario":"18:00",
-  "temperatura": 24
-}, {
-  "estado":"MS",
-  "horario": "18:00",
-  "temperatura":26
-}, {
-
-}];
-var sigla = [ "AM", "AC", "RO", "PA", "RR", "AP", "TO", "MA","SE","BA","AL", "PE", "PI", "PB", "CE", "RN","GO","DF", "MT", "MS"];
-var dadosformatados = gerarDados(sigla, climaBR);
-
-// Canvas
+// (const canvas) -- Pega os Elementos HTML que tem o atributo data-tipoGrafico, ele retorna os elementos em forma de Array.
 const canvas = document.querySelectorAll("[data-tipoGrafico]");
-
+// (const sigla) -- Guarda os indentifacadores dos gráficos, usaremos isso como filtro nos dados para saber qual gráfico recebe qual dado.
+const sigla = obterIds(canvas);
+// (const dados) -- Dados recebe o dados formatados no formato que iremos usar na geração dos gráficos.
+const dados = formatarDados(sigla, climaBR);
+// laço forEach que vai percorrer os elementos HTML que foram guardados na variável (const canvas), cada item dentro do Array é representado pelo parâmetro (item).
 canvas.forEach((item) => {
+  // (let tipo) -- Pega o valor que está sendo passado no atributo "data-tipoGrafico", o valor está sendo passado no HTML.
   let tipo = item.getAttribute("data-tipoGrafico");
   
+  // (let idCanvas) -- Pega o valor que está sendo passado no atributo "id", o valor está sendo passado no HTML.
   let idCanvas = item.getAttribute("id");
-  let dadoCanvas = dadosformatados.find(elemento => elemento.id == idCanvas);
-
-  let cor = definirCor(idCanvas);
+  // (let dadoCanvas) -- Realiza uma busca dentro do Array dos dados, caso a comparação que está sendo passada como parâmetro seja verdadeira ele retorna o valor encontrado, caso seja falso ele retorna o valor "undefined", caso possua mais de um elemento que corresponda ao valor da comparação ele irá retornar o primeiro dos valores a ser encontrado.
+  // A busca funciona como um tipo de laço que percorre todos os elementos do Array, o "elemento" se refere ao elemento onde o laço está, a comparação é feita pelo atributo "id" do elemento e é comparado com a variável (idCanvas).
+  let dadoCanvas = dados.find(elemento => elemento.id == idCanvas);
   
-  gerarGrafico(item, tipo, dadoCanvas, cor);
+  // Condição para conferir se existe algum dado que seja correspondente ao gráfoc, caso exista ele cria o gráfico, caso não exista ele esconde o elemento da tela.
+  if (dadoCanvas != undefined) {
+    // (let cor) -- Guarda um valor que será usado para definir a cor do gráfico, essa cor é definino na função "definirCor".
+    let cor = definirCor(idCanvas);
+    
+    // Gera o gráfico
+    gerarGrafico(item, tipo, dadoCanvas, cor);
+  } else {
+    // Esconde o elemento da tela
+    item.parentNode.style.display = "none";
+  }
 });
 
-function definirCor(siglas){
-  switch (siglas) {
+// Função que retorna os indentifacodres dos gráficos, receb um Array com os elementos HTML no qual você obeter o indentifacador
+function obterIds(elementos) {
+  // (let ids) -- Os indentifacores serão guardados aqui dentro.
+  let ids = [];
+  
+  // Laço que irá percorrer pelo Array de lementos passado
+  for (let i = 0; i < elementos.length; i++) {
+    // (let idCanvas) -- Pega o valor que está sendo passado no atributo "id", o valor está sendo passado no HTML.
+    let id = elementos[i].getAttribute("id");
+    // Adiciona o indentifacadores obtido dentro no Array de indentifacadores
+    ids.push(id);
+  }
+  
+  // retorna o Array ids
+  return ids;
+}
+
+// Função que retorna um valor para ser usado como cor de acordo com a região do estado, recebe um estado para poder encontrar a região
+function definirCor(estado) {
+  // Condicional para definir as regiões e retornar a cor de acordo com o estado passado.
+  switch (estado) {
     case "CE":
     case "RN":
     case "PB":
@@ -363,12 +58,12 @@ function definirCor(siglas){
     case "AL":
     case "PI":
     case "MA":       
-      return "red";
+    return "red";
     case "DF":
     case "MT":
     case "GO":
     case "MS":
-      return "yellow";
+    return "yellow";
     case "AM":
     case "AC":
     case "RO":
@@ -376,32 +71,13 @@ function definirCor(siglas){
     case "RR":
     case "AP":
     case "TO":
-    return 'green';          
-    
+    return 'green';
     default:
-      return "white";
+    return "white";
   }
 }
 
-function gerarDados(id, dados) {
-  var dadosfinais = [] 
-  for(let i = 0; i < id.length; i++) {
-    var dadosfiltrados = dados.filter(dado => { return dado.estado == id[i] });
-    var estrutura = {id: id[i], horario: [], temperatura: []};
-    
-    for (let i = 0; i < dadosfiltrados.length; i++) {        
-      estrutura.horario.push(dadosfiltrados[i].horario);
-      estrutura.temperatura.push(dadosfiltrados[i].temperatura);
-    }
-    
-    dadosfinais.push(estrutura);
-  }
-  
-  return dadosfinais;
-}
-
-
-
+// Função que gera o gráfico, recebe como parâmetro o elemento onde será criado o gráfico, o tipo de gráfico, os dados que irão ser usados no gráfico e cor dos dados.
 function gerarGrafico(canvas, tipo , dados, cor) {
   Chart.defaults.global.defaultFontColor = 'white';
   let ctx = canvas.getContext("2d");
@@ -409,11 +85,11 @@ function gerarGrafico(canvas, tipo , dados, cor) {
     type: tipo,
     
     data: {
-      labels: dados["horario"],
+      labels: dados["data"],
       datasets: [
         {
           label: "Graus °C",
-           backgroundColor: cor,
+          backgroundColor: cor,
           borderColor: "gray",
           data: dados["temperatura"]
         }
@@ -428,9 +104,9 @@ function gerarGrafico(canvas, tipo , dados, cor) {
               min: 0,
               max: 50,
             },
-          },
-        ],
-      },
-    },
+          }
+        ]
+      }
+    }
   });
 }
