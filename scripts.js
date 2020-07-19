@@ -6,6 +6,8 @@ const sigla = obterIds(canvas);
 const dados = formatarDados(sigla, climaBR);
 // laço forEach que vai percorrer os elementos HTML que foram guardados na variável (const canvas), cada item dentro do Array é representado pelo parâmetro (item).
 canvas.forEach((item) => {
+
+  let cor = document.defaultView.getComputedStyle(item.parentNode,null).color;
   // (let tipo) -- Pega o valor que está sendo passado no atributo "data-tipoGrafico", o valor está sendo passado no HTML.
   let tipo = item.getAttribute("data-tipoGrafico");
   
@@ -18,7 +20,7 @@ canvas.forEach((item) => {
   // Condição para conferir se existe algum dado que seja correspondente ao gráfoc, caso exista ele cria o gráfico, caso não exista ele esconde o elemento da tela.
   if (dadoCanvas != undefined) {
     // (let cor) -- Guarda um valor que será usado para definir a cor do gráfico, essa cor é definino na função "definirCor".
-    let cor = definirCor(idCanvas);
+    // let cor = definirCor(idCanvas);
     
     // Gera o gráfico
     gerarGrafico(item, tipo, dadoCanvas, cor);
@@ -45,37 +47,37 @@ function obterIds(elementos) {
   return ids;
 }
 
-// Função que retorna um valor para ser usado como cor de acordo com a região do estado, recebe um estado para poder encontrar a região
-function definirCor(estado) {
-  // Condicional para definir as regiões e retornar a cor de acordo com o estado passado.
-  switch (estado) {
-    case "CE":
-    case "RN":
-    case "PB":
-    case "SE":
-    case "BA":
-    case "PE":
-    case "AL":
-    case "PI":
-    case "MA":       
-    return "red";
-    case "DF":
-    case "MT":
-    case "GO":
-    case "MS":
-    return "yellow";
-    case "AM":
-    case "AC":
-    case "RO":
-    case "PA":
-    case "RR":
-    case "AP":
-    case "TO":
-    return 'green';
-    default:
-    return "white";
-  }
-}
+// // Função que retorna um valor para ser usado como cor de acordo com a região do estado, recebe um estado para poder encontrar a região
+// function definirCor(estado) {
+//   // Condicional para definir as regiões e retornar a cor de acordo com o estado passado.
+//   switch (estado) {
+//     case "CE":
+//     case "RN":
+//     case "PB":
+//     case "SE":
+//     case "BA":
+//     case "PE":
+//     case "AL":
+//     case "PI":
+//     case "MA":       
+//     return "red";
+//     case "DF":
+//     case "MT":
+//     case "GO":
+//     case "MS":
+//     return "yellow";
+//     case "AM":
+//     case "AC":
+//     case "RO":
+//     case "PA":
+//     case "RR":
+//     case "AP":
+//     case "TO":
+//     return 'green';
+//     default:
+//     return "white";
+//   }
+// }
 
 // Função que gera o gráfico, recebe como parâmetro o elemento onde será criado o gráfico, o tipo de gráfico, os dados que irão ser usados no gráfico e cor dos dados.
 function gerarGrafico(canvas, tipo , dados, cor) {
