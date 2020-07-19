@@ -65,7 +65,7 @@ header {
     max-width: 100%;
     margin: 0px 20px 0px 20px;
     border-radius: 5px;
-    justify-content: start;
+    justify-content: space-between;
     background-color: #212138;
     /* background-color: white; */
     box-shadow: 5px 5px 10px #0d0b18;
