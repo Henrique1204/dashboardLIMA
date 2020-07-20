@@ -81,6 +81,91 @@ figcaption{
     color: #F62;
 }
 
+main {
+    padding-bottom: 20px;
+}
+
+main a, main p {
+    color: #FFF;
+    text-align: center;
+}
+
+main a {
+    width: 100px;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #212138;
+    display: block;
+    transition: all ease 0.3s;
+}
+
+main a:hover, main a:focus {
+    color: #212138;
+    background-color: #FFF;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    color: #FFF;
+    background-color: #212138;
+}
+
+footer h1 {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2.4px;
+    text-align: center;
+}
+
+footer ul {
+    max-width: 1080px;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+footer li {
+    margin: 40px 15px 0;
+    width: 240px;
+    text-align: center;
+    list-style: none;
+}
+
+footer li span {
+    font-size: 24px;
+    letter-spacing: 2.4px;
+}
+
+footer li span::after {
+    content: "";
+    width: 80px;
+    height: 2px;
+    margin: 10px auto 0;
+    background-color: currentColor;
+    display: block;
+}
+
+footer li a {
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: inherit;
+    display: inline-block;
+}
+
+footer li a:hover {
+    text-decoration: underline;
+}
+
 /* Responsividade */
 @media only screen and (max-width: 560px) {
     /* Header */

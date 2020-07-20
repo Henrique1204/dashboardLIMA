@@ -75,46 +75,46 @@ let climaBR = [
     {"estado": "SE", "data": "00:00", "temperatura": 24},
     // Centro-Oeste
     // 06:00
-    {"estado": "GO", "data": "06:00", "temperatura": 20},
-    {"estado": "DF", "data": "06:00", "temperatura": 23},
-    {"estado": "MT", "data": "06:00", "temperatura": 22},
-    {"estado": "MS", "data": "06:00", "temperatura": 24},
+    {"estado": "GO", "data": "16-07-2020", "temperatura": 20},
+    {"estado": "DF", "data": "16-07-2020", "temperatura": 23},
+    {"estado": "MT", "data": "16-07-2020", "temperatura": 22},
+    {"estado": "MS", "data": "16-07-2020", "temperatura": 24},
     // 12:00
-    {"estado": "GO", "data": "12:00", "temperatura": 35},
-    {"estado": "DF", "data": "12:00", "temperatura": 26},
-    {"estado": "MT", "data": "12:00", "temperatura": 33},
-    {"estado": "MS", "data": "12:00", "temperatura": 32},
+    {"estado": "GO", "data": "17-07-2020", "temperatura": 35},
+    {"estado": "DF", "data": "17-07-2020", "temperatura": 26},
+    {"estado": "MT", "data": "17-07-2020", "temperatura": 33},
+    {"estado": "MS", "data": "17-07-2020", "temperatura": 32},
     // 18:00
-    {"estado": "GO", "data": "18:00", "temperatura": 19},
-    {"estado": "DF", "data": "18:00", "temperatura": 17},
-    {"estado": "MT", "data": "18:00", "temperatura": 24},
-    {"estado": "MS", "data": "18:00", "temperatura": 26},
+    {"estado": "GO", "data": "18-07-2020", "temperatura": 19},
+    {"estado": "DF", "data": "18-07-2020", "temperatura": 17},
+    {"estado": "MT", "data": "18-07-2020", "temperatura": 24},
+    {"estado": "MS", "data": "18-07-2020", "temperatura": 26},
     // 00:00
-    {"estado": "GO", "data": "00:00", "temperatura": 19},
-    {"estado": "DF", "data": "00:00", "temperatura": 25},
-    {"estado": "MT", "data": "00:00", "temperatura": 21},
-    {"estado": "MS", "data": "00:00", "temperatura": 23},
-    // Centro-Oeste
+    {"estado": "GO", "data": "19-07-2020", "temperatura": 19},
+    {"estado": "DF", "data": "19-07-2020", "temperatura": 25},
+    {"estado": "MT", "data": "19-07-2020", "temperatura": 21},
+    {"estado": "MS", "data": "19-07-2020", "temperatura": 23},
+    // Sudeste
     // 06:00
-    {"estado": "SP", "data": "06:00", "temperatura": 20},
-    {"estado": "MG", "data": "06:00", "temperatura": 23},
-    {"estado": "RJ", "data": "06:00", "temperatura": 22},
-    {"estado": "ES", "data": "06:00", "temperatura": 24},
+    {"estado": "SP", "data": "03-20", "temperatura": 20},
+    {"estado": "MG", "data": "03-20", "temperatura": 23},
+    {"estado": "RJ", "data": "03-20", "temperatura": 22},
+    {"estado": "ES", "data": "03-20", "temperatura": 24},
     // 12:00
-    {"estado": "SP", "data": "12:00", "temperatura": 35},
-    {"estado": "MG", "data": "12:00", "temperatura": 26},
-    {"estado": "RJ", "data": "12:00", "temperatura": 33},
-    {"estado": "ES", "data": "12:00", "temperatura": 32},
+    {"estado": "SP", "data": "04-20", "temperatura": 35},
+    {"estado": "MG", "data": "04-20", "temperatura": 26},
+    {"estado": "RJ", "data": "04-20", "temperatura": 33},
+    {"estado": "ES", "data": "04-20", "temperatura": 32},
     // 18:00
-    {"estado": "SP", "data": "18:00", "temperatura": 19},
-    {"estado": "MG", "data": "18:00", "temperatura": 17},
-    {"estado": "RJ", "data": "18:00", "temperatura": 24},
-    {"estado": "ES", "data": "18:00", "temperatura": 26},
+    {"estado": "SP", "data": "05-20", "temperatura": 19},
+    {"estado": "MG", "data": "05-20", "temperatura": 17},
+    {"estado": "RJ", "data": "05-20", "temperatura": 24},
+    {"estado": "ES", "data": "05-20", "temperatura": 26},
     // 00:00
-    {"estado": "SP", "data": "00:00", "temperatura": 19},
-    {"estado": "MG", "data": "00:00", "temperatura": 25},
-    {"estado": "RJ", "data": "00:00", "temperatura": 21},
-    {"estado": "ES", "data": "00:00", "temperatura": 23}
+    {"estado": "SP", "data": "06-20", "temperatura": 19},
+    {"estado": "MG", "data": "06-20", "temperatura": 25},
+    {"estado": "RJ", "data": "06-20", "temperatura": 21},
+    {"estado": "ES", "data": "06-20", "temperatura": 23}
 ];
 
 // Função que formata os dados gerados pelo arduíno, recebe um Array com os indentifacadores para ser usados nos dados (id) e um Array com os dados para serem formatados (dados).
