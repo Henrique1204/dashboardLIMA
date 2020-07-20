@@ -76,6 +76,38 @@ function gerarGrafico(canvas, tipo , dados, cor) {
       options: {}
     });
   }
+  else if (tipo == "horizontalBar")
+  {
+    new Chart(ctx, {
+      type: tipo,
+      
+      data: {
+        labels: dados["data"],
+        datasets: [
+          {
+            label: "Graus °C",
+            backgroundColor: cor,
+            borderColor: "rgba(255, 255, 255, 0.5)",
+            data: dados["temperatura"]
+          }
+        ]
+      },
+      
+      options: {
+        scales: {
+          xAxes: [
+            {
+              ticks: {
+                min: 0,
+                max: 50,
+              }
+            }
+          ]
+        }
+      }
+    });
+  }
+
   else
   {
     new Chart(ctx, {

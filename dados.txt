@@ -93,4 +93,7 @@
 {"estado": "SP", "data": "00:00", "temperatura": 19},
 {"estado": "MG", "data": "00:00", "temperatura": 25},
 {"estado": "RJ", "data": "00:00", "temperatura": 21},
-{"estado": "ES", "data": "00:00", "temperatura": 23}]
+{"estado": "ES", "data": "00:00", "temperatura": 23},
+{"estado": "RS", "data": "00:00", "temperatura": 10},
+{"estado": "SC", "data": "00:00", "temperatura": 6},
+{"estado": "PR", "data": "00:00", "temperatura": 12}]
