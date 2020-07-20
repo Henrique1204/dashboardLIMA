@@ -9,7 +9,7 @@ const dados = formatarDados(sigla, climaBR);
 
 // laço forEach que vai percorrer os elementos HTML que foram guardados na variável (const canvas), cada item dentro do Array é representado pelo parâmetro (item).
 canvas.forEach((item) => {
-
+  
   // (let tipo) -- Pega o valor que está sendo passado no atributo "data-tipoGrafico", o valor está sendo passado no HTML.
   let tipo = item.getAttribute("data-tipoGrafico");
   
@@ -54,34 +54,57 @@ function obterIds(elementos) {
 // Função que gera o gráfico, recebe como parâmetro o elemento onde será criado o gráfico, o tipo de gráfico, os dados que irão ser usados no gráfico e cor dos dados.
 function gerarGrafico(canvas, tipo , dados, cor) {
   Chart.defaults.global.defaultFontColor = "#FFF";
-
+  
   let ctx = canvas.getContext("2d");
-  new Chart(ctx, {
-    type: tipo,
-    
-    data: {
-      labels: dados["data"],
-      datasets: [
-        {
-          label: "Graus °C",
-          backgroundColor: cor,
-          borderColor: "rgba(255, 255, 255, 0.5)",
-          data: dados["temperatura"]
-        }
-      ]
-    },
-    
-    options: {
-      scales: {
-        yAxes: [
+  
+  if ( tipo == "polarArea")
+  {
+    new Chart(ctx, {
+      type: tipo,
+      
+      data: {
+        labels: dados["data"],
+        datasets: [
           {
-            ticks: {
-              min: 0,
-              max: 50,
-            }
+            label: "Graus °C",
+            backgroundColor: cor,
+            borderColor: "rgba(255, 255, 255, 0.5)",
+            data: dados["temperatura"]
           }
         ]
+      },
+      options: {}
+    });
+  }
+  else
+  {
+    new Chart(ctx, {
+      type: tipo,
+      
+      data: {
+        labels: dados["data"],
+        datasets: [
+          {
+            label: "Graus °C",
+            backgroundColor: cor,
+            borderColor: "rgba(255, 255, 255, 0.5)",
+            data: dados["temperatura"]
+          }
+        ]
+      },
+      
+      options: {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                min: 0,
+                max: 50,
+              }
+            }
+          ]
+        }
       }
-    }
-  });
+    });
+  }
 }
