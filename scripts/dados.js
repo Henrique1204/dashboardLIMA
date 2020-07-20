@@ -88,12 +88,33 @@ let climaBR = [
     {"estado": "GO", "data": "18:00", "temperatura": 19},
     {"estado": "DF", "data": "18:00", "temperatura": 17},
     {"estado": "MT", "data": "18:00", "temperatura": 24},
-    {"estado": "MS", "data": "18:00", "temperatura" :26},
+    {"estado": "MS", "data": "18:00", "temperatura": 26},
     // 00:00
     {"estado": "GO", "data": "00:00", "temperatura": 19},
     {"estado": "DF", "data": "00:00", "temperatura": 25},
     {"estado": "MT", "data": "00:00", "temperatura": 21},
-    {"estado": "MS", "data": "00:00", "temperatura": 23}
+    {"estado": "MS", "data": "00:00", "temperatura": 23},
+    // Centro-Oeste
+    // 06:00
+    {"estado": "SP", "data": "06:00", "temperatura": 20},
+    {"estado": "MG", "data": "06:00", "temperatura": 23},
+    {"estado": "RJ", "data": "06:00", "temperatura": 22},
+    {"estado": "ES", "data": "06:00", "temperatura": 24},
+    // 12:00
+    {"estado": "SP", "data": "12:00", "temperatura": 35},
+    {"estado": "MG", "data": "12:00", "temperatura": 26},
+    {"estado": "RJ", "data": "12:00", "temperatura": 33},
+    {"estado": "ES", "data": "12:00", "temperatura": 32},
+    // 18:00
+    {"estado": "SP", "data": "18:00", "temperatura": 19},
+    {"estado": "MG", "data": "18:00", "temperatura": 17},
+    {"estado": "RJ", "data": "18:00", "temperatura": 24},
+    {"estado": "ES", "data": "18:00", "temperatura": 26},
+    // 00:00
+    {"estado": "SP", "data": "00:00", "temperatura": 19},
+    {"estado": "MG", "data": "00:00", "temperatura": 25},
+    {"estado": "RJ", "data": "00:00", "temperatura": 21},
+    {"estado": "ES", "data": "00:00", "temperatura": 23}
 ];
 
 // Função que formata os dados gerados pelo arduíno, recebe um Array com os indentifacadores para ser usados nos dados (id) e um Array com os dados para serem formatados (dados).

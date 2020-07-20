@@ -77,6 +77,10 @@ figcaption{
     color: #26f;
 }
 
+#regsudeste {
+    color: #F62;
+}
+
 /* Responsividade */
 @media only screen and (max-width: 560px) {
     /* Header */
