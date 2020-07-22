@@ -56,87 +56,25 @@ function gerarGrafico(canvas, tipo , dados, cor) {
   Chart.defaults.global.defaultFontColor = "#FFF";
   
   let ctx = canvas.getContext("2d");
-  
-  if ( tipo == "polarArea")
-  {
-    new Chart(ctx, {
-      type: tipo,
-      
-      data: {
-        labels: dados["data"],
-        datasets: [
-          {
-            label: "Graus °C",
-            backgroundColor: cor,
-            borderColor: "rgba(255, 255, 255, 0.5)",
-            data: dados["temperatura"]
-          }
-        ]
-      },
-      options: {}
-    });
-  }
-  else if (tipo == "horizontalBar")
-  {
-    new Chart(ctx, {
-      type: tipo,
-      
-      data: {
-        labels: dados["data"],
-        datasets: [
-          {
-            label: "Graus °C",
-            backgroundColor: cor,
-            borderColor: "rgba(255, 255, 255, 0.5)",
-            data: dados["temperatura"]
-          }
-        ]
-      },
-      
-      options: {
-        scales: {
-          xAxes: [
-            {
-              ticks: {
-                min: 0,
-                max: 50,
-              }
-            }
-          ]
-        }
-      }
-    });
-  }
 
-  else
-  {
-    new Chart(ctx, {
-      type: tipo,
-      
-      data: {
-        labels: dados["data"],
-        datasets: [
-          {
-            label: "Graus °C",
-            backgroundColor: cor,
-            borderColor: "rgba(255, 255, 255, 0.5)",
-            data: dados["temperatura"]
-          }
-        ]
-      },
-      
-      options: {
-        scales: {
-          yAxes: [
-            {
-              ticks: {
-                min: 0,
-                max: 50,
-              }
-            }
-          ]
+  // (let opcoes) -- Operador ternário pra definir as opções do gráfico de acordo com o tipo dele.
+  let opcoes = (tipo == "polarArea") ? {} : (tipo == "horizontalBar") ? { scales: { xAxes: [{ ticks: { min: 0, max: 50 }}]}} : { scales: { yAxes: [{ ticks: { min: 0, max: 50 }}]}};
+
+  new Chart(ctx, {
+    type: tipo,
+    
+    data: {
+      labels: dados["data"],
+      datasets: [
+        {
+          label: "Graus °C",
+          backgroundColor: cor,
+          borderColor: "rgba(255, 255, 255, 0.5)",
+          data: dados["temperatura"]
         }
-      }
-    });
-  }
+      ]
+    },
+    
+    options: opcoes
+  });
 }
