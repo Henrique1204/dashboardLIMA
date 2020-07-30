@@ -134,35 +134,15 @@ let climaBR = [
     {"estado": "PR", "data": "00:00", "temperatura": 12}
 ];
 
-// Função que formata os dados gerados pelo arduíno, recebe um Array com os indentifacadores para ser usados nos dados (id) e um Array com os dados para serem formatados (dados).
-function formatarDados(id, dados) {
-    // (let dadosFormatados) -- Os dados formatados serão guardados aqui dentro.
-    let dadosFormatados = [];
+function formatarDados(ids, dados) {
+    return ids.map(id => {
+        if (dados.some(dado => dado.estado == id)) {
+            const data = dados.filter(dado => dado.estado == id).map(dado => dado.data);
+            const temperatura = dados.filter(dado => dado.estado == id).map(dado => dado.temperatura);
 
-    // Laço que percorre a lista de indentifadores
-    for(let i = 0; i < id.length; i++) {
-        // (let dadosFiltrados) -- Recebe um Array com os valores que correspondem ao filtro, caso não exista elementos que correspondam ao filtro ele retorna um Array vazio.
-        // Os elementos estão sendo filtrados pelo indentifacador (id), para isso ele compara o estado que está sendo passado no dado.
-        let dadosFiltrados = dados.filter(dado => { return dado.estado == id[i] });
-
-        // Condição para conferir se o filtro encontrou algum dado, caso tenha encontrado ele gera o dado formatado, caso contrário não faz nada.
-        if (dadosFiltrados.length != 0) {        
-            // (let formato) -- É o molde da estrutura na qual a gente vai usar na versão final dos dados.
-            let formato = {id: id[i], data: [], temperatura: []};
-
-            // Laço para adicionar os valores dentro da estrutura
-            for (let i = 0; i < dadosFiltrados.length; i++) {
-                // Adiciona os valores das datas para dentro da estrutura.    
-                formato.data.push(dadosFiltrados[i].data);
-                // Adiciona os valores das temperaturas para dentro da estrutra.
-                formato.temperatura.push(dadosFiltrados[i].temperatura);
-            }
-
-            // Adiciona o dado formatado dentro do Array dos dados formatados
-            dadosFormatados.push(formato);
+            return {id, data, temperatura};
+        } else {
+            return {id: ""};
         }
-    }
-
-    // Retorna o Array com os dados formatados
-    return dadosFormatados;
+    });
 }
