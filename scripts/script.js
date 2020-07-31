@@ -1,11 +1,11 @@
 // (const canvas) -- Pega os Elementos HTML que tem o atributo data-tipoGrafico, ele retorna os elementos em forma de Array.
 const canvas = document.querySelectorAll("[data-tipoGrafico]");
 
-// (const sigla) -- Guarda os indentifacadores dos gráficos, usaremos isso como filtro nos dados para saber qual gráfico recebe qual dado.
-const sigla = Array.from(canvas).map(item => item.id);
+// (const siglas) -- Guarda os indentifacadores dos gráficos, usaremos isso como filtro nos dados para saber qual gráfico recebe qual dado.
+const siglas = Array.from(canvas).map(item => item.id);
 
 // (const dados) -- Dados recebe o dados formatados no formato que iremos usar na geração dos gráficos.
-const dados = formatarDados(sigla, climaBR);
+const dados = formatarDados(siglas, climaBR);
 
 // laço forEach que vai percorrer os elementos HTML que foram guardados na variável (const canvas), cada item dentro do Array é representado pelo parâmetro (item).
 canvas.forEach((item) => {

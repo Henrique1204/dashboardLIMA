@@ -141,8 +141,6 @@ function formatarDados(ids, dados) {
             const temperatura = dados.filter(dado => dado.estado == id).map(dado => dado.temperatura);
 
             return {id, data, temperatura};
-        } else {
-            return {id: ""};
         }
-    });
+    }).filter(item => item != undefined);
 }
